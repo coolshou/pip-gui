@@ -1,7 +1,9 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 import sys
-from PyQt4 import QtGui,QtCore
+from PyQt5 import QtGui,QtCore,QtWidgets,QApplication
 
-class gui(QtGui.QMainWindow, QtCore.QProcess):
+class gui(QtWidgets.QMainWindow, QtCore.QProcess):
     def __init__(self):
         super(gui, self).__init__()
         self.initUI()
@@ -42,7 +44,7 @@ class gui(QtGui.QMainWindow, QtCore.QProcess):
 
 #Function Main Start
 def main():
-    app = QtGui.QApplication(sys.argv)
+    app = QApplication(sys.argv)
     ui=gui()
     ui.show()
     sys.exit(app.exec_())

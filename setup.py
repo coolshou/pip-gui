@@ -31,14 +31,20 @@ except:
 setup(
     name="pipgui",
     version=find_version("pip_gui/mainGUI.py"),
-    description="",
-    url="https://github.com/GDGVIT/pip-gui",
+    description="A GUI based Python Package installer",
+    url="https://github.com/coolshou/pip-gui",
     author="GDGVIT",
+    long_description=long_description,
     packages=find_packages(include=[
         "pip_gui",
         "pip_gui.*"
     ]),
     include_package_data=True,
+    package_data={
+        'pip_gui': ['Resource_Files/*.txt', 
+                           'Resource_Files/*.json', 
+                           "Resource_Files/*.png"],
+    },
     # py_modules=["pip_gui.mainGUI"],
     entry_points={
         "console_scripts": [
@@ -49,12 +55,14 @@ setup(
         "Development Status :: 4 - Beta",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
         "Environment :: X11 Applications :: Qt",
-        "Programming Language :: Python :: 2",
-        "Programming Language :: Python :: 2 :: Only",
-        "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3 :: Only",
+        "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: Implementation :: CPython"
     ],
     install_requires=[
-    "beautifulsoup4>=4.5, <4.5.4"
+    "beautifulsoup4>=4.5, <4.5.4",
+    "PyQt5 >= 5.5"
     ]
 )

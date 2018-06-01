@@ -6,8 +6,10 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-from PyQt4 import QtCore, QtGui
-
+from PyQt5 import QtCore, QtGui
+from PyQt5.QtWidgets import (QWidget, QLabel, QVBoxLayout, QAbstractItemView,
+                             QHBoxLayout, QPushButton, QApplication,
+                             QListWidget, QLineEdit)
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
 except AttributeError:
@@ -15,47 +17,47 @@ except AttributeError:
         return s
 
 try:
-    _encoding = QtGui.QApplication.UnicodeUTF8
+    _encoding = QApplication.UnicodeUTF8
     def _translate(context, text, disambig):
-        return QtGui.QApplication.translate(context, text, disambig, _encoding)
+        return QApplication.translate(context, text, disambig, _encoding)
 except AttributeError:
     def _translate(context, text, disambig):
-        return QtGui.QApplication.translate(context, text, disambig)
+        return QApplication.translate(context, text, disambig)
 
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName(_fromUtf8("Form"))
         Form.resize(440, 538)
-        self.verticalLayoutWidget = QtGui.QWidget(Form)
+        self.verticalLayoutWidget = QWidget(Form)
         self.verticalLayoutWidget.setGeometry(QtCore.QRect(300, 140, 121, 98))
         self.verticalLayoutWidget.setObjectName(_fromUtf8("verticalLayoutWidget"))
-        self.verticalLayout = QtGui.QVBoxLayout(self.verticalLayoutWidget)
+        self.verticalLayout = QVBoxLayout(self.verticalLayoutWidget)
         self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
-        self.btnInstall = QtGui.QPushButton(self.verticalLayoutWidget)
+        self.btnInstall = QPushButton(self.verticalLayoutWidget)
         self.btnInstall.setObjectName(_fromUtf8("btnInstall"))
         self.verticalLayout.addWidget(self.btnInstall)
-        self.btnBack = QtGui.QPushButton(self.verticalLayoutWidget)
+        self.btnBack = QPushButton(self.verticalLayoutWidget)
         self.btnBack.setObjectName(_fromUtf8("btnBack"))
         self.verticalLayout.addWidget(self.btnBack)
-        self.listWidget = QtGui.QListWidget(Form)
+        self.listWidget = QListWidget(Form)
         self.listWidget.setGeometry(QtCore.QRect(20, 140, 261, 381))
-        self.listWidget.setSelectionMode(QtGui.QAbstractItemView.MultiSelection)
+        self.listWidget.setSelectionMode(QAbstractItemView.MultiSelection)
         self.listWidget.setObjectName(_fromUtf8("listWidget"))
-        self.label = QtGui.QLabel(Form)
+        self.label = QLabel(Form)
         self.label.setGeometry(QtCore.QRect(20, 100, 401, 21))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.label.setFont(font)
         self.label.setObjectName(_fromUtf8("label"))
-        self.horizontalLayoutWidget = QtGui.QWidget(Form)
+        self.horizontalLayoutWidget = QWidget(Form)
         self.horizontalLayoutWidget.setGeometry(QtCore.QRect(20, 10, 401, 80))
         self.horizontalLayoutWidget.setObjectName(_fromUtf8("horizontalLayoutWidget"))
-        self.horizontalLayout = QtGui.QHBoxLayout(self.horizontalLayoutWidget)
+        self.horizontalLayout = QHBoxLayout(self.horizontalLayoutWidget)
         self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
-        self.label_2 = QtGui.QLabel(self.horizontalLayoutWidget)
+        self.label_2 = QLabel(self.horizontalLayoutWidget)
         self.label_2.setObjectName(_fromUtf8("label_2"))
         self.horizontalLayout.addWidget(self.label_2)
-        self.packageInput = QtGui.QLineEdit(self.horizontalLayoutWidget)
+        self.packageInput = QLineEdit(self.horizontalLayoutWidget)
         self.packageInput.setObjectName(_fromUtf8("packageInput"))
         self.horizontalLayout.addWidget(self.packageInput)
 
