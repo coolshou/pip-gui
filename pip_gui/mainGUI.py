@@ -7,8 +7,6 @@ import sys
 import json
 import time
 import os
-#from pkg_resources import resource_string
-#resource_path = resource_string(__name__, 'Resource_Files')
 resource_path =  os.path.join(os.path.dirname(os.path.abspath(__file__)), "Resource_Files")
 #Importing GUIs
 from pip_gui.GUI import startScreen, progressScreen, uninstallScreen, updateScreen, installScreen
