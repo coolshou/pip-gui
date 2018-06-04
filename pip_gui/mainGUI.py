@@ -277,7 +277,7 @@ class UninstallWindow(QMainWindow, uninstallScreen.Ui_Form):
             self.progWindow.show()
             self.progWindow.callProgram(version, ['uninstall'] + self.allPackages, 5)
             #print 'All Packages Uninstalled.'
-            json.dump([], open('Resource_Files/installedPackage' + fileVersion + '.json', 'w'))
+            json.dump([], open(os.path.join(resource_path ,'installedPackage' + fileVersion + '.json'), 'w'))
             msgBox(5)
         else:
             msgBox(4)
@@ -294,9 +294,9 @@ class InstallWindow(QMainWindow, installScreen.Ui_Form):
     def __init__(self):
         super(InstallWindow, self).__init__()
         self.setupUi(self)
-        self.setWindowIcon(QtGui.QIcon('Resource_Files/googledev.png'))
-        self.offlinePackages = json.load(open('Resource_Files/installedPackage' + fileVersion + '.json'))
-        self.packages = json.load(open('Resource_Files/package' + fileVersion + '.json'))
+        self.setWindowIcon(QtGui.QIcon(os.path.join(resource_path ,'googledev.png')))
+        self.offlinePackages = json.load(open(os.path.join(resource_path ,'installedPackage' + fileVersion + '.json')))
+        self.packages = json.load(open(os.path.join(resource_path ,'package' + fileVersion + '.json')))
         self.matchedList = list()
         self.selectedList = list()
         self.searchStr = str()
