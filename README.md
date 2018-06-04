@@ -1,5 +1,5 @@
 # PIP-GUI
-A GUI framework for PIP developed using PyQt4
+A GUI framework for PIP developed using PyQt5
 
 ### The Start Screen
 ![alt text](readme/startScreen.png?raw=true "Start Window")
